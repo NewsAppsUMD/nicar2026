@@ -254,7 +254,7 @@ def main():
     for article in articles:
         article_id = article.get("id") or article.get("link", "")
         extraction = state.get(article_id, dict(DEFAULT_EXTRACTION))
-        enriched = dict(article)
+        enriched = {k: v for k, v in article.items() if k != "summary"}
         enriched["extraction"] = extraction
         enriched_articles.append(enriched)
 

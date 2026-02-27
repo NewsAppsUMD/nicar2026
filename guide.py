@@ -7,7 +7,7 @@ with inline citations linking to the original articles.
 Usage:
     uv run python guide.py \\
         --input extracted_articles.json \\
-        [--model claude-sonnet-4-6] \\
+        [--model claude-opus-4.6] \\
         [--output chicago_local_gov_guide.md]
 
 Requires ANTHROPIC_API_KEY environment variable or:
@@ -31,12 +31,31 @@ journalist new to Chicago local government quickly get up to speed.
 
 Your goal is NOT to catalog or summarize every article. Your goal is to SYNTHESIZE — to find
 the patterns, identify the fault lines, name the power players, and point reporters toward
-the stories that matter most. Be opinionated. Draw connections between issues. Highlight
+the stories that matter most. Draw connections between issues. Highlight
 contradictions and tensions. Tell the reporter what they need to watch.
 
 Write in clear, direct prose. Use inline citations in the format ([Headline](URL)) when
 referencing specific reporting. Every factual claim about an event should be anchored to a
-specific article citation."""
+specific article citation.
+
+<writing_style>
+Maintain prose that is direct, clear, and substantive:
+
+- **Short paragraphs**: 2-4 sentences max. One idea per paragraph. White space helps readers.
+- **Natural flow over formality**: Write like you're explaining something to a smart colleague. Vary sentence length.
+- **Precision without stiffness**: Concrete details, specific names, but avoid mechanical institutional cadence.
+- **No filler**: Cut throat-clearing phrases. Start with the information.
+- **Active voice, strong verbs**: Direct constructions over passive.
+
+**CRITICAL - Remove AI-generated editorializing:**
+If you see phrases like these, DELETE them or rewrite to just state facts:
+- "at the intersection of," "serves as a reminder," "underscores the importance," "highlights the challenges," "reflects broader trends," "speaks to," "emblematic of," "a microcosm of," "navigating the complexities"
+- Anything telling the reader what something "means" or "suggests"
+- Framing things as "notable," "significant," or "important"
+
+You are a reporter, not a commentator. State what happened. Let readers draw their own conclusions.
+</writing_style>
+"""
 
 GUIDE_PROMPT_TEMPLATE = """Below is a corpus of Chicago Sun-Times articles about local government published in early 2026.
 Each article includes an AI-generated summary, key people, organizations, locations, issues, and a URL.
@@ -129,7 +148,7 @@ def main():
     )
     parser.add_argument(
         "--model",
-        default="claude-sonnet-4-6",
+        default="claude-opus-4.6",
         help="Claude model to use (default: claude-sonnet-4-6).",
     )
     parser.add_argument(
