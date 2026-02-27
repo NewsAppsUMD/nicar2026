@@ -1,0 +1,16 @@
+[project]
+name = "nicar2026"
+version = "0.1.0"
+description = "Chicago Sun-Times local government article classification and synthesis pipeline"
+requires-python = ">=3.11"
+dependencies = [
+    "llm>=0.18",
+    "llm-anthropic",
+    "llm-ollama",
+    "beautifulsoup4>=4.12",
+    "rich>=13.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
