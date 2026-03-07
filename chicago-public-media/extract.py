@@ -7,7 +7,7 @@ extract key people, organizations, locations, issues, a category, and a
 Usage:
     uv run python extract.py \\
         --input classified_articles.json \\
-        --model llama3.2 \\
+        --model groq/meta-llama/llama-4-maverick-17b-128e-instruct \\
         [--output extracted_articles.json] \\
         [--state-file .extract_state.json]
 """
@@ -170,7 +170,7 @@ def main():
     parser.add_argument(
         "--model",
         required=True,
-        help="Ollama model name to use for extraction (e.g. llama3.2, mistral).",
+        help="Ollama model name to use for extraction (e.g. groq/meta-llama/llama-4-maverick-17b-128e-instruct, mistral).",
     )
     parser.add_argument(
         "--output",
