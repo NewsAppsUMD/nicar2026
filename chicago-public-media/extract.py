@@ -1,6 +1,6 @@
 """Stage 2: Extract structured metadata and summaries from classified articles.
 
-Reads classified_articles.json, runs each article through an Ollama model to
+Reads classified_articles.json, runs each article through a model to
 extract key people, organizations, locations, issues, a category, and a
 2-3 sentence summary. Outputs a combined extracted_articles.json.
 

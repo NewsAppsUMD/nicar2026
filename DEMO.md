@@ -63,7 +63,7 @@ uv run python classify.py --model groq/meta-llama/llama-4-maverick-17b-128e-inst
 This writes results to `classified_articles_test.json`.
 
 Other model options:
-- `groq-kimi-k2`
+- `groq/moonshotai/kimi-k2-instruct`
 - `groq/qwen/qwen3-32b`
 - `groq/meta-llama/llama-4-scout-17b-16e-instruct`
 
