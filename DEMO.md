@@ -92,3 +92,14 @@ Open `extracted_articles_test.json` to see each article enriched with:
 - `key_issues` — main policy topics covered
 - `category` — one of: `zoning`, `education`, `public_safety`, `budget`, `justice`, `city_council`, `other`
 - `ai_summary` — a 2–3 sentence factual summary
+
+---
+
+## 7. Run the guide script
+
+You'll need to set the Anthropic key using the `uv run llm keys set anthropic` command.
+
+```bash
+uv run python chicago-public-media/guide.py \
+    --input chicago-public-media/extracted_articles.json
+```

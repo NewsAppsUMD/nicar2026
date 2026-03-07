@@ -4,10 +4,10 @@ Materials for the 2026 NICAR conference presentation on using Large Language Mod
 
 The demo in this repo is a **beat book generator** for Chicago local government coverage, built on top of Chicago Sun-Times articles pulled from the [NewsAppsUMD/beat_book_work](https://github.com/NewsAppsUMD/beat_book_work) repository. The pipeline classifies articles, extracts structured metadata, and synthesizes a beat guide — the kind of document that helps a reporter get up to speed on a new beat in minutes instead of months.
 
-# Ijeoma's slides
-[beat_book.pdf](Intro slides)
+# Intro slides
+[https://github.com/NewsAppsUMD/nicar2026/blob/main/beat_book.pdf](Intro slides)
 
-# Clay's slides
+# Refining slides
 https://www.figma.com/deck/m2it62ezcdsWjA41cmSRc2 
 
 ---
